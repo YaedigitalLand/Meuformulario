@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo de Formulário</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f4f7f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 320px;
+    }
+    .cabecalho-opcoes {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+      margin-bottom: 5px;
+    }
+    .cabecalho-opcoes a {
+      text-decoration: none;
+      color: #007bff;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .cabecalho-opcoes a:hover {
+      text-decoration: underline;
+    }
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Formulário corrigido com o fechamento da tag > -->
+  <form id="meuformulario">
+    
+    <div class="cabecalho-opcoes">
+      <a href="#">Quem é a YEA</a>
+      <a href="#">Whatsapp</a>
+      <a href="#">Instagram</a>
+    </div>
+
+    <h2>Fale Conosco</h2>
+    
+    <input type="text" name="nome" placeholder="Digite seu nome" required>
+    <input type="email" name="email" placeholder="Seu melhor e-mail" required>
+    <input type="url" name="instagram" placeholder="Cole o link do seu Instagram" required>
+    <textarea name="mensagem" placeholder="Escreva sua mensagem..."></textarea>
+    
+    <button type="submit" class="botao-gradiente">Enviar Mensagem</button>
+  </form>
+
+  <!-- Script corrigido apontando para script.js -->
+  <script src="script.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
