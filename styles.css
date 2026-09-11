@@ -10,14 +10,12 @@
   transition: all 0.3s ease;
 }
 
-  @media (max-width:600px){
-   
-  .botao-gradiente{
-  width:100%;
+ @media (max-width: 600px) {
+  .botao-gradiente {
+    width: 100%;
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.35), rgba(0, 86, 179, 0.6));
+    border-color: rgba(0, 123, 255, 0.8);
+    padding: 16px 24px; /* Aumenta a altura do botão no celular */
+    font-size: 16px; /* Garante que o texto fique legível */
   }
-    
-  background: linear-gradient(135deg, rgba(0, 123, 255, 0.35), rgba(0, 86, 179, 0.6));
-  border-color: rgba(0, 123, 255, 0.8);
-
-    }
-   }
+}
