@@ -1,68 +1,131 @@
-/* Remove margens padrão do navegador e faz a página ocupar a tela toda */
-body, html {
+/* Estilo geral da pági
+
+
+
+/* Posicionamento do container */
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Texto escondido por padrão */
+.conteudo-escondido {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 260px;
+  background-color: #ffffff;
+  padding: 15px;
+  margin-top: 8px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e5e7eb;
+  z-index: 10;
+}
+
+.conteudo-escondido h3 {
+  margin-top: 0;
+  font-size: 16px;
+  color: #111827;
+}
+
+.conteudo-escondido p {
+  font-size: 13px;
+  color: #4b5563;
+  line-height: 1.4;
   margin: 0;
-  padding: 0;
-  height: 100%;
+}
+
+/* Classe ativada via JavaScript ao clicar */
+.conteudo-escondido.visivel {
+  display: block;
+}
+body {
+  margin: 0;
+  padding: 40px 20px;
+  background-color: #f4f4f9;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+/* Container principal (Card branco) */
+.card {
+  max-width: 450px;
+  width: 100%;
+  padding: 30px 25px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   box-sizing: border-box;
 }
 
-/* Container que ocupa 100% da altura da tela (100vh) */
-.site-container {
+/* Links no topo */
+.nav-links {
   display: flex;
-  flex-direction: column;
-  min-height: 100vh; 
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
 }
 
-/* --- CABEÇALHO --- */
-.cabecalho {
-  display: flex;
-  justify-content: space-between; /* Espalha os botões no topo */
-  padding: 15px 20px;
-  background-color: #f8f9fa; /* Cor de fundo do cabeçalho */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.nav-links a {
+  color: #0070f3;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
 }
 
-.botao-cabecalho {
-  padding: 8px 16px;
-  border: none;
-  background: transparent;
-  color: #333;
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Título */
+.title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 22px;
   font-weight: bold;
+  color: rgb(236, 134, 1);
+  margin-bottom: 20px;
 }
 
-/* --- CONTEÚDO CENTRAL --- */
-.conteudo-central {
-  flex: 1; /* Faz esta área crescer e empurrar o rodapé, se houver */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centraliza verticalmente no meio da tela */
-  align-items: center;     /* Centraliza horizontalmente */
-  padding: 20px;
-  gap: 20px; /* Dá espaço entre os botões grandes */
+/* Campos do formulário */
+.input-field {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+  color: #374151;
 }
 
-/* Botões do meio (Preenchimento) */
-.botao-grande {
-  width: 100%; /* Ocupa a largura toda */
-  max-width: 350px; /* Não deixa ficar gigante no PC */
-  padding: 20px; /* Deixa o botão bem "gordo" para mobile */
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 10px;
-  border: 2px solid #0056b3;
-  background-color: #007bff;
-  color: white;
+.input-field:focus {
+  border-color: #0070f3;
+}
+
+textarea.input-field {
+  min-height: 100px;
+  resize: none;
+
+}
+
+/* Botão Enviar */
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  background-color: #7992c4a6;
+  color: #032266;
+  border: 2px solid  #f41800b0;
+  border-radius: 30px;
+  font-size:17px;
+  font-weight: 900;
   cursor: pointer;
+  transition: background-color 0.2s;
 }
 
-/* --- REGRA ESPECÍFICA PARA MOBILE --- */
-@media (max-width: 600px) {
-  .cabecalho {
-    padding: 10px;
-  }
-  
-  .botao-grande {
-    padding: 24px; /* Aumenta ainda mais a área de clique no celular */
-    font-size: 20px; /* Texto maior para leitura fácil no celular */
-  }
+.btn-submit:hover {
+  background-color: #d1d5db;
 }
