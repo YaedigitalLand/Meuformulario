@@ -2,74 +2,41 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Exemplo de Formulário</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fale Conosco</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    body {
-      font-family: sans-serif;
-      background: #f4f7f6;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    form {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      width: 320px;
-    }
-    .cabecalho-opcoes {
-      display: flex;
-      justify-content: space-between;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 10px;
-      margin-bottom: 5px;
-    }
-    .cabecalho-opcoes a {
-      text-decoration: none;
-      color: #007bff;
-      font-size: 14px;
-      font-weight: 500;
-    }
-    .cabecalho-opcoes a:hover {
-      text-decoration: underline;
-    }
-    input, textarea {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 14px;
-    }
-  </style>
 </head>
 <body>
 
-  <!-- Formulário corrigido com o fechamento da tag > -->
-  <form id="meuformulario">
-    
-    <div class="cabecalho-opcoes">
-      <a href="#">Quem é a YEA</a>
-      <a href="#">Whatsapp</a>
-      <a href="#">Instagram</a>
+  <div class="card">
+    <div class="nav-links">
+       <img src="Design.png" alt="LogodaYEA" />
+      
+      <!-- Container do botão Quem é a YEA com o texto embutido -->
+      <div class="dropdown-container">
+        <a href="#" id="link-yea">Quem é a YEA</a>
+        
+        <div id="texto-yea" class="conteudo-escondido">
+          <h3>Sobre a YEA</h3>
+          <p>A YEA Digital é uma empresa focada em estratégias de marketing digital, tráfego pago e soluções para alavancar negócios na internet.</p>
+        </div>
+      </div>
+
+   
     </div>
 
-    <h2>Fale Conosco</h2>
-    
-    <input type="text" name="nome" placeholder="Digite seu nome" required>
-    <input type="email" name="email" placeholder="Seu melhor e-mail" required>
-    <input type="url" name="instagram" placeholder="Cole o link do seu Instagram" required>
-    <textarea name="mensagem" placeholder="Escreva sua mensagem..."></textarea>
-    
-    <button type="submit" class="botao-gradiente">Enviar Mensagem</button>
-  </form>
+    <h2 class="title">Fale Conosco</h2>
 
-  <!-- Script corrigido apontando para script.js -->
-  <script src="script.js" type="text/javascript" charset="utf-8"></script>
+    <form>
+      <input type="text" class="input-field" placeholder="Digite seu nome *" required>
+      <input type="email" class="input-field" placeholder="Seu melhor e-mail *" required>
+      <input type="url" class="input-field" placeholder="Cole o link do seu Instagram *">
+      <textarea class="input-field" placeholder="Escreva sua mensagem..."></textarea>
+      
+      <button type="submit" class="btn-submit">Enviar Mensagem</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
